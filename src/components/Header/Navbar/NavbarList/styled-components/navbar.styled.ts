@@ -7,10 +7,11 @@ export const LayoutNavbarList = styled.ul`
   gap: 2vw;
   margin: 0;
   height: 100%;
-  cursor: pointer;
+  position: relative;
 `;
 export const NavbarItems = styled.li`
   list-style: none;
+  height: 100%;
   text-transform: uppercase;
   letter-spacing: .4em;
   font-weight: 600;

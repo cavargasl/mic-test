@@ -1,24 +1,23 @@
-import { mdiMenu } from '@mdi/js'
-import Icon from '@mdi/react'
+import { useState } from 'react'
+import { MenuList } from './models'
 import { LayoutNavbarList, NavbarItems } from './styled-components'
+import { SubList } from './SubList'
 
-interface Props {
-  isMobile?: boolean
-}
+export default function NavbarList() {
+  const [itemSelected, setItemSelected] = useState<MenuList>()
 
-export default function NavbarList({ isMobile }: Props) {
-  if (isMobile) return (
-    <LayoutNavbarList>
-      <Icon path={mdiMenu} size={"15px"} />
-    </LayoutNavbarList>
-  )
+  function handleClick(item: MenuList){
+    if(itemSelected && itemSelected.title === item.title) return setItemSelected(undefined)
+    return setItemSelected(item)
+  }
   return (
     <LayoutNavbarList>
-      <NavbarItems>Mujer</NavbarItems>
-      <NavbarItems>Hombre</NavbarItems>
-      <NavbarItems>New arrivals</NavbarItems>
-      <NavbarItems>Básicos</NavbarItems>
-      <NavbarItems>Cyber days</NavbarItems>
+      {
+        MenuList.map(item => <NavbarItems key={item.title} onMouseEnter={() => handleClick(item)}>{item.title}</NavbarItems>)
+      }
+      {
+        itemSelected && itemSelected.subMenu && <SubList menuList={itemSelected} setItemSelected={setItemSelected} />
+      }
     </LayoutNavbarList>
   )
 }
