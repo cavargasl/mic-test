@@ -1,3 +1,4 @@
+import { Serach } from './Search'
 import { LayoutNavbar, Logo, NavbarItems, NavbarList } from './styled-components'
 
 export default function Navbar() {
@@ -8,9 +9,10 @@ export default function Navbar() {
         <NavbarItems>Mujer</NavbarItems>
         <NavbarItems>Hombre</NavbarItems>
         <NavbarItems>New arrivals</NavbarItems>
-        <NavbarItems>Básico</NavbarItems>
+        <NavbarItems>Básicos</NavbarItems>
         <NavbarItems>Cyber days</NavbarItems>
       </NavbarList>
+      <Serach />
     </LayoutNavbar>
   )
 }

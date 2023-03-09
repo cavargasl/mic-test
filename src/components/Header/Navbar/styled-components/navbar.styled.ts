@@ -6,6 +6,7 @@ export const LayoutNavbar = styled.header`
   top: 0;
   z-index: 999;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 0 4vw;
 `;
@@ -23,5 +24,10 @@ export const NavbarItems = styled.li`
   display: flex;
   align-items: center;
   white-space: nowrap;
-  padding: 1rem 0;
+  padding: 1.43rem 0;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    color: var(--theme-secundary);
+  }
 `;
