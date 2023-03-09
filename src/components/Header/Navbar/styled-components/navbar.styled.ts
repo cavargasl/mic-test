@@ -8,10 +8,18 @@ export const LayoutNavbar = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 4vw;
+  padding: 0 10%;
+  gap: 1rem;
+  @media only screen and (max-width: 1400px) {
+    padding-inline: 6%;
+  }
+  @media only screen and (max-width: 1230px) {
+    padding-inline: 3%;
+  }
 `;
 
 export const NavbarList = styled.ul`
+  padding: 0;
   display: flex;
   gap: 2vw;
   margin: 0;

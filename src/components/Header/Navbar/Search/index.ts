@@ -1,1 +1,1 @@
-export { default as Serach } from './Serach';
+export { default as Search } from './Search';

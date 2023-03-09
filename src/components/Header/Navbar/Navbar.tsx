@@ -1,4 +1,5 @@
-import { Serach } from './Search'
+import { ListIcons } from './ListIcons'
+import { Search } from './Search'
 import { LayoutNavbar, Logo, NavbarItems, NavbarList } from './styled-components'
 
 export default function Navbar() {
@@ -12,7 +13,8 @@ export default function Navbar() {
         <NavbarItems>Básicos</NavbarItems>
         <NavbarItems>Cyber days</NavbarItems>
       </NavbarList>
-      <Serach />
+      <Search />
+      <ListIcons />
     </LayoutNavbar>
   )
 }

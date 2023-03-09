@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     --theme-primary: #131e29;
     --theme-secundary: #ea0029;
 
-    --theme-gray-dark: #3f3f40;
+    --theme-gray: #979899;
   }
 
   html {
