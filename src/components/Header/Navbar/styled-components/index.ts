@@ -1,3 +1,3 @@
-export * from './index';
 export * from './logo.styled';
-export * from './navbar.styled';
+export * from './navbar-layout';
+export * from './wrapper-mobile';
