@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { MenuList } from './models'
-import { LayoutNavbarList, NavbarItems } from './styled-components'
+import { Item, LayoutNavbarList, NavbarItems } from './styled-components'
 import { SubList } from './SubList'
 
 export default function NavbarList() {
@@ -13,7 +13,11 @@ export default function NavbarList() {
   return (
     <LayoutNavbarList>
       {
-        MenuList.map(item => <NavbarItems key={item.title} onMouseEnter={() => handleClick(item)}>{item.title}</NavbarItems>)
+        MenuList.map(item => (
+          <NavbarItems key={item.title} onMouseEnter={() => handleClick(item)}>
+            <Item>{item.title}</Item>
+          </NavbarItems>
+        ))
       }
       {
         itemSelected && itemSelected.subMenu && <SubList menuList={itemSelected} setItemSelected={setItemSelected} />

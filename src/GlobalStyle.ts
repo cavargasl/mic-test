@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     font-weight: 400;
     
+    font-size: 12px;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -27,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     box-sizing: border-box;
-    font-size: 12px;
   }
 `;
 
