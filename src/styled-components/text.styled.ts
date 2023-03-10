@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface Props {
+  size?: string
+}
+
 export const H1 = styled.h1`
   color: black;
   margin: 0;
@@ -21,8 +25,16 @@ export const H4 = styled.h4`
   font-size: 1rem;
 `;
 
-export const P = styled.p`
+export const P = styled.p<Props>`
   color: black;
   margin: 0;
-  font-size: 1rem;
+  font-size: ${props => props.size ?? "1rem"};
+  line-height: 1.5rem;
+`;
+
+export const Strong = styled.strong<Props>`
+  color: black;
+  margin: 0;
+  font-size: ${props => props.size ?? "1rem"};
+  line-height: 1.5rem;
 `;

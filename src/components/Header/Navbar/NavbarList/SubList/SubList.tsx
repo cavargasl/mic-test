@@ -11,7 +11,7 @@ export default function SubList({ menuList, setItemSelected }: Props) {
         <Title>{menuList.title} <LinkShowMore>ver todo</LinkShowMore></Title>
       </LayoutTitle>
       {
-        menuList.subMenu?.map(item => <Item>{item}</Item>)
+        menuList.subMenu?.map(item => <Item key={item}>{item}</Item>)
       }
     </LayoutSubList>
   )

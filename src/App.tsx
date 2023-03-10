@@ -1,11 +1,11 @@
-import { Header } from "./components"
 import GlobalStyle from "./GlobalStyle"
+import { Home } from "./pages"
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Home />
     </>
   )
 }
