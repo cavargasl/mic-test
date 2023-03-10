@@ -5,10 +5,9 @@ export const LayoutNavbarList = styled.ul`
   padding: 0;
   display: flex;
   align-items: center;
-  gap: 2vw;
+  gap: 3vw;
   margin: 0;
   height: 100%;
-  position: relative;
 `;
 export const NavbarItems = styled.li`
   list-style: none;

@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 export const LayoutSubList = styled.div`
   background-color: white;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   position: absolute;
   top: 100%;
-  width: 100%;
+  width: 60%;
+  transform: translateX(-50%);
+  left: 50%;
   min-height: 18rem;
   display: flex;
   flex-direction: column;
