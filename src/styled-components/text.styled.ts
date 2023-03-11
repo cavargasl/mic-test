@@ -50,3 +50,7 @@ export const A = styled.a`
   cursor: pointer;
   border-bottom: 1px solid white;
 `;
+
+export const Span = styled.span`
+  color: white;
+`;

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Image = styled.img.attrs(props => ({
   alt: props.alt,
-  src: props.src
+  src: props.src,
+  with: props.width || "100%"
 }))`
-  width: 100%;
-  object-fit: cover;
+  width: ${props => props.width};
+  object-fit: contain;
 `;

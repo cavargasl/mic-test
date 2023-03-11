@@ -1,4 +1,4 @@
-import { Image } from 'src/styled-components';
+import { Image, P } from 'src/styled-components';
 import styled from 'styled-components';
 
 export const LayoutFooter = styled.footer`
@@ -23,4 +23,20 @@ export const PaymentMethods = styled(Image)`
   @media only screen and (max-width: 70rem) {
     max-width: 90%;
   }
+`;
+
+export const BannerFooter = styled.div`
+  margin: 2rem 0;
+  background-color: var(--theme-secundary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+`;
+
+export const BannerText = styled(P)`
+  color: white;
+  font-weight: 600;
 `;
