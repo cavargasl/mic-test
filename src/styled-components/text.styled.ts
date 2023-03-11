@@ -25,11 +25,16 @@ export const H4 = styled.h4`
   font-size: 1rem;
 `;
 
-export const P = styled.p<Props>`
-  color: black;
+export const DefaultP = styled.p.attrs(props => ({
+  color: props.color || "black",
+}))`
+  color: ${props => props.color};
   margin: 0;
-  font-size: ${props => props.size ?? "1rem"};
+  font-size: 1rem;
   line-height: 1.5rem;
+`;
+export const P = styled(DefaultP)<Props>`
+  font-size: ${props => props.size};
 `;
 
 export const Strong = styled.strong<Props>`
@@ -37,4 +42,11 @@ export const Strong = styled.strong<Props>`
   margin: 0;
   font-size: ${props => props.size ?? "1rem"};
   line-height: 1.5rem;
+`;
+
+export const A = styled.a`
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border-bottom: 1px solid white;
 `;
