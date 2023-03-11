@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const LayoutInfoCLient = styled.section`
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 70rem) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 `;
 
 export const ConatainItem = styled.div`
@@ -18,6 +23,7 @@ export const Item = styled.div`
   display: flex;
   color: black;
   gap: 1rem;
+  min-width: 125px;
 `;
 export const ItemText = styled.div`
   display: flex;
@@ -33,4 +39,9 @@ export const Dot = styled.span`
   margin-right: 1.5rem;
   position: absolute;
   left: -5px;
+
+  @media only screen and (max-width: 70rem) {
+    left: 50%;
+    top: calc(-1rem + -5px);
+  }
 `;
