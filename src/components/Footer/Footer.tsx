@@ -1,4 +1,5 @@
 import { Image, Span } from 'src/styled-components'
+import { Info } from './Info'
 import { InfoClient } from './InfoClient'
 import { Newsletter } from './Newsletter'
 import { BannerFooter, BannerText, LayoutFooter, PaymentMethods } from './styled-components'
@@ -10,6 +11,7 @@ export default function Footer() {
         <InfoClient />
         <Newsletter />
         <PaymentMethods src='https://moviesshopco.vteximg.com.br/arquivos/medios-de-pago-mic-footer.png' alt='payment methods' />
+        <Info />
       </LayoutFooter>
 
       <BannerFooter>
@@ -21,7 +23,6 @@ export default function Footer() {
         |
         <Image src='https://moviesshopco.vteximg.com.br/arquivos/ssl-secure.svg' alt='logo ssl-secure' width={"100px"} />
       </BannerFooter>
-
     </>
   )
 }

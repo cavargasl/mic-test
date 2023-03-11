@@ -48,7 +48,7 @@ export const A = styled.a`
   color: white;
   font-weight: 700;
   cursor: pointer;
-  border-bottom: 1px solid white;
+  text-decoration: underline;
 `;
 
 export const Span = styled.span`

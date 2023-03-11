@@ -2,7 +2,7 @@ import { Image, P } from 'src/styled-components';
 import styled from 'styled-components';
 
 export const LayoutFooter = styled.footer`
-  width: 60%;
+  width: 63%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
