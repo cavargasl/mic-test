@@ -4,6 +4,7 @@ specifiers:
   '@mdi/js': ^7.1.96
   '@mdi/react': ^1.6.1
   '@reduxjs/toolkit': ^1.9.3
+  '@splidejs/react-splide': ^0.7.12
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
   '@types/styled-components': ^5.1.26
@@ -19,6 +20,7 @@ dependencies:
   '@mdi/js': 7.1.96
   '@mdi/react': 1.6.1
   '@reduxjs/toolkit': 1.9.3_k4ae6lp43ej6mezo3ztvx6pykq
+  '@splidejs/react-splide': 0.7.12
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-redux: 8.0.5_3xleytyzprlgycb2ded54tx72i
@@ -557,6 +559,16 @@ packages:
       redux: 4.2.1
       redux-thunk: 2.4.2_redux@4.2.1
       reselect: 4.1.7
+    dev: false
+
+  /@splidejs/react-splide/0.7.12:
+    resolution: {integrity: sha512-UfXH+j47jsMc4x5HA/aOwuuHPqn6y9+ZTNYPWDRD8iLKvIVMZlzq2unjUEvyDAU+TTVPZOXkG2Ojeoz0P4AkZw==}
+    dependencies:
+      '@splidejs/splide': 4.1.4
+    dev: false
+
+  /@splidejs/splide/4.1.4:
+    resolution: {integrity: sha512-5I30evTJcAJQXt6vJ26g2xEkG+l1nXcpEw4xpKh0/FWQ8ozmAeTbtniVtVmz2sH1Es3vgfC4SS8B2X4o5JMptA==}
     dev: false
 
   /@types/hoist-non-react-statics/3.3.1:
