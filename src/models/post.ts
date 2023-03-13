@@ -21,3 +21,9 @@ export interface InfoPost {
     text: string
   }[]
 }
+
+export const ListPostPreviewEmptyState: Post[] = []
+
+export interface CartItem extends Post {
+  quantity: number;
+}

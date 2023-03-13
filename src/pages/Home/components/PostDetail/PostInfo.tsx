@@ -2,7 +2,9 @@ import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Flex, HStack, 
 import { mdiAlarm, mdiCubeSend, mdiHeartOutline } from '@mdi/js'
 import Icon from '@mdi/react'
 import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { PostDetail } from 'src/models'
+import { addToCart } from 'src/redux/slices/cart'
 import { Image, Span } from 'src/styled-components'
 import { LayoutPrice, OfferPrice, Price } from '../styled-components'
 import { Accordion } from './components'
@@ -27,6 +29,7 @@ export default function PostInfo() {
     getPostDetail()
   }, [])
 
+  const dispatch = useDispatch()
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
     useNumberInput({
       step: 1,
@@ -95,7 +98,7 @@ export default function PostInfo() {
             <Input {...input} border="none" />
             <Button {...inc} backgroundColor="transparent">+</Button>
           </HStack>
-          <AddToCart secundary>agregar a mi bolsa</AddToCart>
+          <AddToCart secundary onClick={() => dispatch(addToCart({ post: data, quantity: Number(input.value) }))}>agregar a mi bolsa</AddToCart>
         </LayoutAddToCart>
         <Accordion data={data.info} />
         <Box borderBottom={"1px solid"} borderColor="gray.300" padding={2}>
