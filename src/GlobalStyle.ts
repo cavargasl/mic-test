@@ -29,6 +29,23 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
   }
+
+  .splide__pagination {
+    bottom: -2.5em;
+  }
+  .splide__pagination__page{
+    background: var(--theme-gray);
+    height: 10px;
+    width: 10px;
+  }
+  .splide__pagination__page.is-active{
+    background: var(--theme-primary);
+    transform: none;
+    width: 20px;
+    height: 10px;
+    border-radius: 5px;
+    opacity: 1;
+  }
 `;
 
 export default GlobalStyle;
