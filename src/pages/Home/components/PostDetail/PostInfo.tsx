@@ -1,4 +1,4 @@
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, HStack, IconButton, Input, Link, Text, useNumberInput, VStack } from '@chakra-ui/react'
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, HStack, Input, Link, Text, useNumberInput, VStack } from '@chakra-ui/react'
 import { mdiAlarm, mdiCubeSend, mdiHeartOutline } from '@mdi/js'
 import Icon from '@mdi/react'
 import { useEffect, useState } from 'react'
@@ -41,8 +41,8 @@ export default function PostInfo() {
   if (!data) return <Span>Cargando...</Span>
   return (
     <LayoutPostDetail>
-      <VStack>
-        <Breadcrumb>
+      <VStack gap={4}>
+        <Breadcrumb w="100%">
           {
             BreadCrumbNames.map((item, idx) => (
               <BreadcrumbItem key={item}>
@@ -51,7 +51,7 @@ export default function PostInfo() {
             ))
           }
         </Breadcrumb>
-        <PostPhotos />
+        <PostPhotos data={data.img} />
         <HStack w="100%" justifyContent={"center"} gap={4} color="blackAlpha.600">
           <HStack>
             <Icon path={mdiCubeSend} size={1.3} />
@@ -79,7 +79,7 @@ export default function PostInfo() {
           {
             data.offer && <OfferPrice size='1.5rem'>{`$${(data.price).toLocaleString('es')}`}</OfferPrice>
           }
-          <Price size='1.7rem'>${data.offer ? ((data.offer / 100) * data.price).toLocaleString('es') : (data.price).toLocaleString('es')}</Price>
+          <Price size='1.7rem'>${data.offer ? (((100 - data.offer) / 100) * data.price).toLocaleString('es') : (data.price).toLocaleString('es')}</Price>
         </LayoutPrice>
         <LayoutSizes>
           <ContainSizes>

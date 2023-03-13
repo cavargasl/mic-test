@@ -7,11 +7,16 @@ export const fetchPostDetail = async (url?: string): Promise<PostDetail> => awai
     description: "CHAQUETA GÉNERO NEUTRO, CAQUI CON CIERRE DE MANDALORIAN",
     offer: 10,
     aditionalInfo: "El modelo mide 1,88CM y tiene una talla L",
-    price: 80991,
+    price: 259990,
     likes: 3,
     img: [
-      "https://moviesshopco.vteximg.com.br/arquivos/ids/173083/236733_2_Varsity_MVS.jpg?v=638091326715200000",
-      "https://moviesshopco.vteximg.com.br/arquivos/ids/173084/236733-camiseta-hombre-mandalorian-manga-corta-1.jpg?v=638091326918630000"
+      "https://moviesshopco.vtexassets.com/arquivos/ids/173068-800-800?v=638091310430670000&width=800&height=800&aspect=true",
+      "https://moviesshopco.vtexassets.com/arquivos/ids/173069-1200-1200?v=638091311513030000&width=1200&height=1200&aspect=true",
+      "https://moviesshopco.vtexassets.com/arquivos/ids/173070-1200-1200?v=638091311685100000&width=1200&height=1200&aspect=true",
+      "https://moviesshopco.vtexassets.com/arquivos/ids/173071-1200-1200?v=638091311783300000&width=1200&height=1200&aspect=true",
+      "https://moviesshopco.vtexassets.com/arquivos/ids/173072-1200-1200?v=638091312048800000&width=1200&height=1200&aspect=true",
+      "https://moviesshopco.vtexassets.com/arquivos/ids/173073-1200-1200?v=638091312233030000&width=1200&height=1200&aspect=true",
+      "https://moviesshopco.vtexassets.com/arquivos/ids/173077-1200-1200?v=638091313610530000&width=1200&height=1200&aspect=true"
     ],
     sizes: ["S", "M", "L", "XL"],
     info: [

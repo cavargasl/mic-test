@@ -51,6 +51,8 @@ export const A = styled.a`
   text-decoration: underline;
 `;
 
-export const Span = styled.span`
-  color: white;
+export const Span = styled.span.attrs(props => {
+  color: props.color || "white"
+})`
+  color: ${props => props.color};
 `;

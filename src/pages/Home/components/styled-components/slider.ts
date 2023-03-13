@@ -1,7 +1,9 @@
-import { H3 } from 'src/styled-components';
+import { H3, P } from 'src/styled-components';
 import styled from 'styled-components';
 
-
+interface Props {
+  size?: string
+}
 export const LayoutSlider = styled.section`
   display: flex;
   flex-direction: column;
@@ -21,3 +23,17 @@ export const TitleStrong = styled.span`
   font-size: 2rem;
   text-transform: uppercase;
 `;
+
+export const LayoutPrice = styled.div`
+  display: flex;
+  gap: 1rem;
+  position: relative;
+`
+export const OfferPrice = styled(P)`
+  color: var(--theme-gray);
+  text-decoration: line-through;
+`
+export const Price = styled(P)<Props>`
+  font-weight: 800;
+  font-size: ${props => props.size || "1.2rem"};
+`

@@ -1,8 +1,9 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import { useState } from 'react'
 import { Post } from 'src/models'
-import { Button, Image } from 'src/styled-components'
-import { Description, LayoutCard, LayoutImage, LayoutPrice, New, OfferPrice, Offert, Price, Title } from './styled-components'
+import { Button, Image, P } from 'src/styled-components'
+import { LayoutPrice, OfferPrice, Price } from '../styled-components'
+import { LayoutCard, LayoutImage, New, Offert, Title } from './styled-components'
 
 interface Props {
   post: Post
@@ -37,12 +38,12 @@ export default function Card({ post }: Props) {
         }
       </LayoutImage>
       <Title>{post.title}</Title>
-      <Description>{post.description}</Description>
+      <P>{post.description}</P>
       <LayoutPrice>
         {
           post.offer && <OfferPrice>{`$${(post.price).toLocaleString('es')}`}</OfferPrice>
         }
-        <Price>${post.offer ? ((post.offer / 100) * post.price).toLocaleString('es') : (post.price).toLocaleString('es')}</Price>
+        <Price>${post.offer ? (((100 - post.offer) / 100) * post.price).toLocaleString('es') : (post.price).toLocaleString('es')}</Price>
       </LayoutPrice>
       <Button secundary>Ver producto</Button>
     </LayoutCard>

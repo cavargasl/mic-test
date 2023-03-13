@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const LayoutHome = styled.main`
+  padding-top: 3rem;
   padding-bottom: 8rem;
   width: 80%;
   margin: 0 auto;

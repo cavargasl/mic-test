@@ -39,19 +39,3 @@ export const New = styled.span`
 export const Title = styled(H3)`
   color: var(--theme-gray);
 `
-export const Description = styled(P)`
-  
-`
-
-export const LayoutPrice = styled.div`
-  display: flex;
-  gap: 1rem;
-`
-export const OfferPrice = styled(P)`
-  color: var(--theme-gray);
-  text-decoration: line-through;
-`
-export const Price = styled(P)`
-  font-weight: 800;
-  font-size: 1.2rem;
-`
