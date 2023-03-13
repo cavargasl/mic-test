@@ -6,6 +6,9 @@ export const LayoutPostDetail = styled.section`
   display: grid;
   grid-template-columns: 1fr 384px;
   gap: 6rem;
+  @media only screen and (max-width: 1350px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const LayoutInfo = styled.div`
   display: flex;

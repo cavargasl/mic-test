@@ -1,4 +1,4 @@
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, HStack, Input, Link, Text, useNumberInput, VStack } from '@chakra-ui/react'
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Flex, HStack, Input, Link, Text, useNumberInput, VStack } from '@chakra-ui/react'
 import { mdiAlarm, mdiCubeSend, mdiHeartOutline } from '@mdi/js'
 import Icon from '@mdi/react'
 import { useEffect, useState } from 'react'
@@ -52,16 +52,16 @@ export default function PostInfo() {
           }
         </Breadcrumb>
         <PostPhotos data={data.img} />
-        <HStack w="100%" justifyContent={"center"} gap={4} color="blackAlpha.600">
-          <HStack>
+        <Flex w="100%" gap={4} color="blackAlpha.600" flexDir={["column", "column", "row"]}>
+          <HStack w={["100%", "100%", "50%"]} justifyContent={["center", "center", "flex-end"]}>
             <Icon path={mdiCubeSend} size={1.3} />
             <Text>Envío <Text fontWeight={800} as="span">a toda Colombia</Text></Text>
           </HStack>
-          <HStack>
+          <HStack w={["100%", "100%", "50%"]} justifyContent={["center", "center", "flex-start"]}>
             <Icon path={mdiAlarm} size={1} />
             <Text>Tiempo de entrega <Text fontWeight={800} as="span">3 a 7 días hábiles</Text></Text>
           </HStack>
-        </HStack>
+        </Flex>
         <Text>{data.aditionalInfo}</Text>
       </VStack>
       <LayoutInfo>
