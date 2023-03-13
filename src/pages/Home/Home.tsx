@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Footer, Header } from 'src/components'
 import { Post } from 'src/models'
-import { CustomSlider } from './components'
+import { CustomSlider, PostInfo } from './components'
 import { fetchPostSlider } from './services'
 import { LayoutHome } from './styled-components'
 
+
 export default function Home() {
   const [data, setData] = useState<Post[]>([])
-
 
   const getPost = async () => {
     try {
@@ -26,6 +26,7 @@ export default function Home() {
     <>
       <Header />
       <LayoutHome>
+        <PostInfo />
         <CustomSlider title="También te puede INTERESAR" posts={data} />
         <CustomSlider title="Seleccionados para TI" posts={data} />
       </LayoutHome>
