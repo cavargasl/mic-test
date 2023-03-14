@@ -6,6 +6,7 @@ export interface Post {
   offer?: number
   img: string[]
   isNew?: boolean
+  likes: number
 }
 export interface PostDetail extends Post {
   likes: number
