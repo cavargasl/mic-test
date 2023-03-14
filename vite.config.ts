@@ -9,8 +9,7 @@ export default defineConfig({
       { find: 'src', replacement: '/src' }
     ]
   },
-  mode: "development",
   build: {
-    minify: false,
-  },
+    chunkSizeWarningLimit: 600
+  }
 })
