@@ -8,5 +8,9 @@ export default defineConfig({
     alias: [
       { find: 'src', replacement: '/src' }
     ]
+  },
+  build: {
+    minify: false, 
+    chunkSizeWarningLimit: 1600
   }
 })
