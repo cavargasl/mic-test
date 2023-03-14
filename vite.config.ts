@@ -8,5 +8,9 @@ export default defineConfig({
     alias: [
       { find: 'src', replacement: '/src' }
     ]
-  }
+  },
+  mode: "development",
+  build: {
+    minify: false,
+  },
 })
