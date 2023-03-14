@@ -1,4 +1,4 @@
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Flex, HStack, Input, Link, Text, useNumberInput, VStack } from '@chakra-ui/react'
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Flex, HStack, Input, Link, Text, useDisclosure, useNumberInput, VStack } from '@chakra-ui/react'
 import { mdiAlarm, mdiCubeSend, mdiHeartOutline } from '@mdi/js'
 import Icon from '@mdi/react'
 import { useEffect, useState } from 'react'
@@ -7,7 +7,7 @@ import { PostDetail } from 'src/models'
 import { addToCart } from 'src/redux/slices/cart'
 import { Image, Span } from 'src/styled-components'
 import { LayoutPrice, OfferPrice, Price } from '../styled-components'
-import { Accordion } from './components'
+import { Accordion, ModalSize } from './components'
 import { PostPhotos } from './components/PostPhotos'
 import { fetchPostDetail } from './services'
 import { AddToCart, ContainOffer, ContainRef, ContainSizes, Description, HelpSizes, LayoutAddToCart, LayoutInfo, LayoutPostDetail, LayoutSizes, Ref, Sizes, Title } from './styled-components'
@@ -40,6 +40,7 @@ export default function PostInfo() {
   const inc = getIncrementButtonProps()
   const dec = getDecrementButtonProps()
   const input = getInputProps()
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   if (!data) return <Span>Cargando...</Span>
   return (
@@ -90,7 +91,10 @@ export default function PostInfo() {
               data.sizes.map(item => <Sizes key={item}>{item}</Sizes>)
             }
           </ContainSizes>
-          <HelpSizes>Guía de tallas</HelpSizes>
+          <Button onClick={onOpen} variant="unstyled">
+            <HelpSizes >Guía de tallas</HelpSizes>
+          </Button>
+          <ModalSize isOpen={isOpen} onClose={onClose} />
         </LayoutSizes>
         <LayoutAddToCart>
           <HStack maxW='120px' borderBottom={"1px solid"} borderColor="gray.300" height="50px">

@@ -39,7 +39,7 @@ export default function Drawer({ isOpen, onClose }: Props) {
 
         <DrawerBody paddingBlock={8}>
           {
-            cart.items.map(item => <Card data={item} quantity={item.quantity} />)
+            cart.items.map(item => <Card key={item.id} data={item} quantity={item.quantity} />)
           }
         </DrawerBody>
 
