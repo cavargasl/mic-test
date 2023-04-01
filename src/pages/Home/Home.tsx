@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Footer, Header } from 'src/components'
 import { Post } from 'src/models'
-import { CustomSlider, PostInfo } from './components'
+import { CustomSlider, PostInfo, VideoBanner } from './components'
 import { fetchPostSlider } from './services'
 import { LayoutHome } from './styled-components'
 
@@ -26,6 +26,7 @@ export default function Home() {
     <>
       <Header />
       <LayoutHome>
+        <VideoBanner />
         <PostInfo />
         <CustomSlider title="También te puede INTERESAR" posts={data} />
         <CustomSlider title="Seleccionados para TI" posts={data} />
