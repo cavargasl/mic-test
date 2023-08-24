@@ -26,7 +26,6 @@ export default function Home() {
     <>
       <Header />
       <LayoutHome>
-        <VideoBanner />
         <PostInfo />
         <CustomSlider title="También te puede INTERESAR" posts={data} />
         <CustomSlider title="Seleccionados para TI" posts={data} />
